@@ -1,0 +1,800 @@
+@charset "UTF-8";
+.otsikko {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1% 2%;
+  background-image: url("/img/ForestofStars10.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.otsikkoteksti {
+  font-size: 500%;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Husky;
+}
+
+/*Navigointi alkaa tästä*/
+.navigointi {
+  overflow: hidden;
+}
+
+.navigointi .icon {
+  display: none;
+}
+
+.navigointi a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 5px;
+  text-decoration: none;
+  position: relative;
+  font-size: 130%;
+  font-weight: bolder;
+  margin-left: 40px;
+  margin-right: 20px;
+  font-family: strom;
+}
+
+.navigointi a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+  padding-bottom: 0.5%;
+}
+
+.navigointi a:hover {
+  padding-bottom: 0.5%;
+}
+
+.navigointi a:hover::before {
+  width: 100%;
+}
+
+.active {
+  background: rgba(0, 0, 204, 0.5);
+  border-radius: 30px;
+}
+
+/*Galleria alkaa tästä*/
+.gallery {
+  width: 100%;
+  margin-top: 10em;
+  margin-bottom: -10em;
+}
+
+.gallery-container {
+  align-items: center;
+  display: flex;
+  height: 400px;
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+}
+
+.gallery-item {
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  width: 30%;
+  z-index: 0;
+  border-radius: 15px;
+  background-size: contain;
+}
+
+.gallery-item-1 {
+  left: 15%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+.gallery-item-2,
+.gallery-item-4 {
+  height: 70%;
+  opacity: 0.8;
+  width: 30%;
+  z-index: 1;
+}
+
+.gallery-item-2 {
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+.gallery-item-3 {
+  box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
+  height: 85%;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  z-index: 2;
+}
+
+.gallery-item-4 {
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.gallery-item-5 {
+  left: 85%;
+  opacity: 0.4;
+  transform: translateX(-50%);
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+  height: 100px;
+}
+
+.gallery-controls button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 50px;
+  padding: 0 12px;
+  text-transform: capitalize;
+}
+
+.gallery-controls-button:focus {
+  outline: none;
+}
+
+.gallery-controls-previous {
+  position: relative;
+}
+
+.gallery-controls-previous::before {
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  left: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 25%;
+  transform: rotate(135deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+
+.gallery-controls-previous:hover::before {
+  left: -40px;
+}
+
+.gallery-controls-next {
+  position: relative;
+}
+
+.gallery-controls-next::before {
+  border: solid #000;
+  border-width: 0 5px 5px 0;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  right: -30px;
+  padding: 10px;
+  position: absolute;
+  top: 45%;
+  transform: rotate(-45deg) translateY(-50%);
+  transition: left 0.15s ease-in-out;
+  width: 5px;
+}
+
+.gallery-controls-next:hover::before {
+  right: -40px;
+}
+
+.gallery-nav {
+  bottom: -15px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.gallery-nav li {
+  background: #ccc;
+  border-radius: 50%;
+  height: 10px;
+  margin: 0 16px;
+  width: 10px;
+}
+
+.gallery-nav li.gallery-item-selected {
+  background: #555;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #5acf50;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: husky;
+  src: url("/css/Husky.woff");
+}
+@font-face {
+  font-family: strom;
+  src: url("/css/Strombon-Regular.woff");
+}
+body {
+  min-height: 100vh;
+  background: url("../img/2.png") no-repeat;
+  background-size: cover;
+}
+
+div#container {
+  display: flex;
+  flex-direction: row;
+  margin: 1em;
+}
+
+div#content {
+  display: inherit;
+}
+div#content section {
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 1em 2em 5em 2em;
+}
+div#content aside {
+  width: 10vw;
+  padding: 2em;
+  background-image: url("/img/flora.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  margin-bottom: 5%;
+}
+
+article {
+  flex: 40%;
+  margin: 1% 0.5%;
+  padding: 1%;
+  border-radius: 50px;
+  font-family: strom;
+  line-height: 230%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-weight: bolder;
+}
+article div {
+  margin: 1em;
+}
+article img {
+  width: 35%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  float: left;
+  margin-top: 10%;
+  margin-right: 6%;
+  margin-left: -1em;
+  margin-bottom: 1%;
+}
+article ul {
+  padding-top: 5%;
+}
+article li {
+  font-size: 100%;
+}
+article h3 {
+  font-family: Husky;
+  font-size: 2em;
+}
+article h2 {
+  font-family: Husky;
+  font-size: 5em;
+}
+article p {
+  font-size: 130%;
+}
+article span.checked {
+  background-image: url("/img/virkkaus/checked.png");
+}
+
+article.left {
+  background-image: url("/img/9_2.png");
+}
+article.left li {
+  list-style-image: url("/img/koira/latetassu3.png");
+}
+article.left p {
+  float: left;
+  padding-left: 15%;
+}
+article.left img {
+  border-radius: 30px;
+}
+
+article.right {
+  background-image: url("/img/rose.png");
+}
+article.right li {
+  list-style-image: url("/img/koira/seratassu.png");
+}
+article.right p {
+  float: left;
+  padding-left: 15%;
+}
+article.right img {
+  border-radius: 30px;
+}
+
+article.center {
+  flex: 80%;
+  background-image: url("/img/Hawk1.png");
+  padding: 5%;
+  padding-left: -5em;
+}
+
+div.text img {
+  border-radius: 0px;
+  width: 50%;
+}
+
+table.tarvikelista {
+  margin-left: 15%;
+  padding-top: 10%;
+}
+table.tarvikelista th {
+  font-size: 150%;
+  text-decoration: underline;
+}
+table.tarvikelista td {
+  font-size: 110%;
+}
+
+footer {
+  position: fixed;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  background-image: url("/img/ForestofStars10.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+footer p {
+  color: aliceblue;
+  font-size: 200%;
+  font-family: strom;
+}
+
+@media screen and (max-width: 1350px) {
+  .otsikko {
+    font-size: 100%;
+    padding-left: 10%;
+    flex-direction: row;
+  }
+  .navigointi a {
+    display: none;
+    padding: 5px 15px;
+    padding-right: 50px;
+    margin-left: 5em;
+  }
+  .navigointi a.icon {
+    float: right;
+    display: block;
+  }
+  .navigointi.responsive {
+    position: relative;
+  }
+  .navigointi.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navigointi.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navigointi a::before {
+    content: "";
+    background: transparent;
+  }
+  .navigointi a:hover {
+    color: green;
+  }
+  .navigointi a:hover::before {
+    width: 50%;
+  }
+  .gallery {
+    margin-top: 5em;
+  }
+  .gallery-container {
+    height: 20em;
+    margin-bottom: 0;
+  }
+  .gallery-item {
+    height: 50%;
+    width: 15%;
+  }
+  .gallery-item-2,
+  .gallery-item-4 {
+    height: 60%;
+    width: 20%;
+  }
+  .gallery-item-3 {
+    height: 70%;
+    width: 25%;
+  }
+  div#content section {
+    width: 80%;
+    flex-direction: row;
+    margin: 0;
+  }
+  div#content section article {
+    flex: 50%;
+  }
+  div#content section article div img {
+    width: 20%;
+    margin: 0 5%;
+  }
+  div#content section article div ul {
+    margin-left: 30%;
+  }
+  div#content aside {
+    width: 12%;
+    padding: 2em;
+    padding-left: 1em;
+    margin: 3% 0;
+  }
+  div#content section {
+    width: 80vw;
+    margin: 1em 2em 5em 2em;
+  }
+}
+@media screen and (max-width: 1100px) {
+  div#content section {
+    flex-direction: column;
+  }
+  .otsikko {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1%;
+    background-image: url("/img/ForestofStars10.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  .otsikkoteksti {
+    font-size: 150%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: Husky;
+  }
+  .navigointi {
+    overflow: hidden;
+  }
+  .navigointi a {
+    position: relative;
+    font-size: 70%;
+    color: #fff;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-left: 0%;
+    margin-top: 2%;
+  }
+  .gallery {
+    margin-top: -8em;
+    margin-bottom: 5em;
+  }
+  .gallery-container {
+    height: 40em;
+    max-width: 100%;
+  }
+  .gallery-item {
+    height: 20%;
+    width: 15%;
+  }
+  .gallery-item-2,
+  .gallery-item-4 {
+    height: 25%;
+    width: 20%;
+  }
+  .gallery-item-3 {
+    height: 30%;
+    width: 25%;
+  }
+  .gallery-controls {
+    margin-top: -30%;
+    height: 100%;
+  }
+  .gallery-controls button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    margin: 0 1%;
+    padding: 0 2%;
+    text-transform: capitalize;
+  }
+  .gallery-controls-button:focus {
+    outline: none;
+  }
+  .gallery-controls-previous {
+    position: relative;
+  }
+  .gallery-controls-previous::before {
+    border-width: 0 3px 3px 0;
+    left: -40%;
+    padding: 6%;
+    top: -25%;
+    width: 10%;
+  }
+  .gallery-controls-next::before {
+    border-width: 0 3px 3px 0;
+    right: -40%;
+    padding: 10%;
+    top: 30%;
+    width: 10%;
+  }
+  div#content {
+    margin-top: 3%;
+  }
+  div#content section {
+    width: 80%;
+    flex-direction: row;
+  }
+  div#content section article {
+    font-size: 75%;
+    flex: 50%;
+  }
+  div#content section article div img {
+    width: 20%;
+    margin: 0 5%;
+  }
+  div#content section article div ul {
+    margin-left: 30%;
+  }
+  div#content section article div p {
+    margin-top: 1em;
+  }
+  div#content aside {
+    width: 7em;
+    margin: 3% 0;
+    padding: 2em;
+    padding-left: 1em;
+  }
+  footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .otsikko .otsikkoteksti {
+    font-size: 250%;
+  }
+  .otsikko .navigointi a {
+    display: none;
+    margin-right: 5em;
+    padding: 0.2em 2em;
+  }
+  .otsikko .navigointi a.icon {
+    float: right;
+    display: block;
+    margin-top: 5%;
+    width: 3em;
+    margin-bottom: 1em;
+    margin-top: -0.5em;
+  }
+  .otsikko div#valikko {
+    margin-top: 25%;
+  }
+  .otsikko div#valikko .active {
+    background: rgba(0, 0, 204, 0.5);
+    border-radius: 30px;
+  }
+  .otsikko .navigointi.responsive {
+    position: relative;
+  }
+  .otsikko .navigointi.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .otsikko .navigointi.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .otsikko .navigointi a::before {
+    content: "";
+    background: transparent;
+  }
+  .otsikko .gallery {
+    margin-top: -8em;
+  }
+  .otsikko .gallery-container {
+    height: 10em;
+  }
+  div#content {
+    margin-top: -3em;
+  }
+  div#content section {
+    width: 80%;
+    flex-direction: row;
+  }
+  div#content section article {
+    font-size: 70%;
+    flex: 50%;
+  }
+  div#content section article div img {
+    width: 40%;
+    margin: 10% 7% 0 0;
+  }
+  div#content section article div ul {
+    margin-left: 40%;
+  }
+  div#content section article div p {
+    margin: 1em 0;
+  }
+  div#content aside {
+    width: 7em;
+    margin: 3% 0;
+    padding: 2em;
+    padding-left: 1em;
+  }
+  footer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .otsikko .otsikkoteksti {
+    font-size: 200%;
+  }
+  .otsikko .navigointi a {
+    margin-left: 50%;
+  }
+  .otsikko .navigointi a::before {
+    content: "";
+    background: transparent;
+  }
+  .otsikko .navigointi a:hover {
+    color: green;
+  }
+  .gallery {
+    margin-top: -8em;
+  }
+  .gallery-container {
+    height: 10em;
+  }
+  div#content {
+    margin-top: -6em;
+  }
+  div#content section article {
+    font-size: 55%;
+    flex: 50%;
+  }
+  div#content section article div img {
+    width: 45%;
+    margin: 17% 7% 0 0;
+  }
+  div#content section article div ul {
+    margin-left: 32%;
+  }
+  div#content section article div li {
+    list-style-image: none;
+    list-style: none;
+    padding: 1em;
+  }
+  div#content section article div p {
+    margin: 1em 0 1em 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .gallery {
+    margin-top: 2em;
+  }
+  .gallery-container {
+    height: 10em;
+    margin-bottom: 5em;
+  }
+  .gallery-item {
+    height: 50%;
+    width: 15%;
+  }
+  .gallery-item-2,
+  .gallery-item-4 {
+    height: 60%;
+    width: 20%;
+  }
+  .gallery-item-3 {
+    height: 70%;
+    width: 25%;
+  }
+  div#content {
+    margin-top: -3em;
+  }
+  div#content section {
+    width: 80%;
+    flex-direction: row;
+  }
+  div#content section article {
+    font-size: 40%;
+    flex: 50%;
+  }
+  div#content section article div img {
+    width: 40%;
+    margin: 20% 2% 0 0;
+  }
+  div#content section article div ul {
+    padding: 1em 0;
+  }
+  div#content section article div li {
+    list-style-image: none;
+    list-style: none;
+    padding-left: 2em;
+  }
+  div#content section article div p {
+    margin: 0 0 1em 0;
+  }
+  div#content aside {
+    width: 7em;
+    margin: 3% 0;
+    padding: 2em;
+    padding-left: 1em;
+  }
+  footer {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

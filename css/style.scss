@@ -1,0 +1,200 @@
+@import "menu";
+@import "gallery";
+@import "content";
+@import "variables";
+@import "reset";
+
+@font-face {
+  font-family: husky;
+  src: url('/css/Husky.woff');
+}
+
+@font-face {
+  font-family: strom;
+  src: url('/css/Strombon-Regular.woff');
+}
+
+body {
+  min-height: 100vh;
+  background: url('../img/2.png') no-repeat;
+  background-size: cover;
+}
+
+div#container {
+  display: flex;
+  flex-direction: row;
+  margin: $general-margin;
+}
+
+div#content {
+  display: inherit;
+
+  section {
+    display: inherit;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 1em 2em 5em 2em;
+  }
+
+  aside {
+    width: 10vw;
+    padding: $general-padding;
+    background-image: url('/img/flora.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    margin-bottom: 5%;
+  }
+}
+
+article {
+  flex: 40%;
+  margin: 1% 0.5%;
+  padding: 1%;
+  border-radius: 50px;
+  font-family: strom;
+  line-height: 230%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-weight: bolder;
+
+  div {
+    margin: $general-margin;
+  }
+
+  img {
+    width: 35%;
+    object-fit: cover;
+    object-position: center;
+    float: left;
+    margin-top: 10%;
+    margin-right: 6%;
+    margin-left: -1em;
+    margin-bottom: 1%;
+
+  }
+
+  ul {
+    padding-top: 5%;
+  }
+
+  li {
+    font-size: 100%;
+  }
+
+  h3 {
+    font-family: Husky;
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-family: Husky;
+    font-size: 5em;
+  }
+
+  p{
+    font-size: 130%;
+  }
+
+  span.checked{
+    background-image: url('/img/virkkaus/checked.png');
+  }
+
+}
+article.left {
+  background-image: url('/img/9_2.png');
+
+  li {
+    list-style-image: url('/img/koira/latetassu3.png');
+  }
+
+  p {
+    float: left;
+    padding-left: 15%;
+  }
+
+  img {
+    border-radius: 30px;
+  }
+
+}
+
+
+article.right {
+  background-image: url('/img/rose.png');
+
+  li {
+    list-style-image: url('/img/koira/seratassu.png');
+  }
+  p {
+    float: left;
+    padding-left: 15%;
+  }
+
+  img {
+    border-radius: 30px;
+  }
+
+}
+
+article.center{
+  flex: 80%;
+  background-image: url('/img/Hawk1.png');
+  padding: 5%;
+  padding-left: -5em; 
+
+ 
+}
+
+div.text{
+  
+  img {
+    border-radius: 0px;
+    width: 50%;
+  }
+}
+
+table.tarvikelista {
+  margin-left: 15%;
+  padding-top: 10%;
+
+  th {
+    font-size: 150%;
+    text-decoration: underline;
+  }
+
+  td {
+    font-size: 110%;
+  }
+
+}
+
+
+
+footer {
+  position: fixed;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5%;
+  background-image: url('/img/ForestofStars10.jpg');
+  background-size: cover;
+  background-position: center;
+  color: $light-foreground-color;
+  text-align: center;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  p {
+    color: aliceblue;
+    font-size: 200%;
+    font-family: strom;
+  }
+}
+
+
+@import "media-query";

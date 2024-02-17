@@ -1,0 +1,76 @@
+.otsikko {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1% 2%;
+    background-image: url('/img/ForestofStars10.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .otsikkoteksti {
+    font-size: 500%;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Husky;
+  }
+  
+  
+  /*Navigointi alkaa tästä*/
+  .navigointi {
+    overflow: hidden;
+  }
+  
+  .navigointi .icon {
+    display: none;
+  }
+  
+  
+  .navigointi a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 5px;
+    text-decoration: none;
+    position: relative;
+    font-size: 130%;
+    font-weight: bolder;
+    margin-left: 40px;
+    margin-right: 20px;
+    font-family: strom;
+  }
+  
+  .navigointi a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+    padding-bottom: 0.5%;
+  }
+  
+  .navigointi a:hover{
+   padding-bottom: 0.5%;
+  }
+  
+  .navigointi a:hover::before {
+    width: 100%;
+  }
+  
+  .active {
+    background: rgba(0, 0, 204, 0.5);
+    border-radius: 30px;
+  }
