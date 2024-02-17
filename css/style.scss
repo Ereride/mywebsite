@@ -14,6 +14,22 @@
   src: url('/css/Strombon-Regular.woff');
 }
 
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.fredoka {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 87.5;
+}
+
 body {
   min-height: 100vh;
   background: url('../img/2.png') no-repeat;
@@ -53,7 +69,7 @@ article {
   margin: 1% 0.5%;
   padding: 1%;
   border-radius: 50px;
-  font-family: strom;
+  font-family: fredoka;
   line-height: 230%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,12 +97,13 @@ article {
   }
 
   li {
+    padding-top: 5%;
     font-size: 100%;
   }
 
   h3 {
     font-family: Husky;
-    font-size: 2em;
+    font-size: 3em;
   }
   
   h2 {
@@ -95,7 +112,7 @@ article {
   }
 
   p{
-    font-size: 130%;
+    font-size: 110%;
   }
 
   span.checked{
@@ -192,7 +209,7 @@ footer {
   p {
     color: aliceblue;
     font-size: 200%;
-    font-family: strom;
+    font-family: fredoka;
   }
 }
 
