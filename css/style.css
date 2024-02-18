@@ -18,11 +18,11 @@
 }
 
 .otsikkoteksti {
-  font-size: 500%;
+  font-size: 3em;
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-family: Husky;
+  font-family: Gloria Hallelujah;
 }
 
 /*Navigointi alkaa tästä*/
@@ -256,19 +256,16 @@ a:hover {
   font-family: strom;
   src: url("/css/Strombon-Regular.woff");
 }
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
+.protest {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
-.fredoka {
-  font-family: "Fredoka", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
+.gloria-hallelujah-regular {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 87.5;
 }
 
 body {
@@ -337,19 +334,18 @@ article li {
   padding-top: 5%;
   font-size: 100%;
 }
-article h3 {
-  font-family: Husky;
-  font-size: 3em;
+article h3, article h2, article h1 {
+  font-family: Gloria Hallelujah;
+  font-size: 2em;
 }
-article h2 {
-  font-family: Husky;
-  font-size: 5em;
+article h1, article h2 {
+  font-family: Gloria Hallelujah;
+  font-size: 3em;
+  text-align: center;
+  margin: 0.5em 0;
 }
 article p {
   font-size: 110%;
-}
-article span.checked {
-  background-image: url("../img/virkkaus/checked.png");
 }
 
 article.left {
@@ -402,6 +398,44 @@ table.tarvikelista th {
 }
 table.tarvikelista td {
   font-size: 110%;
+}
+
+div.askartelu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.askartelu img {
+  display: block;
+  margin: auto 0;
+}
+div.askartelu a {
+  text-shadow: 2px 2px lightblue;
+}
+
+div.taulukkoteksti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.taulukkoteksti table {
+  margin-left: 2em;
+  border-radius: 30px;
+}
+div.taulukkoteksti table th {
+  text-decoration: underline;
+  font-size: 110%;
+}
+div.taulukkoteksti table th, div.taulukkoteksti table td {
+  padding: 0 1em;
+  text-align: left;
+  text-shadow: 1px 0 white;
+}
+div.taulukkoteksti table#valmiit {
+  background-image: url("../img/table_tausta.png");
+}
+div.taulukkoteksti table#suunnitelma {
+  background-image: url("../img/table_tausta1.png");
 }
 
 footer {
