@@ -46,7 +46,7 @@
   font-weight: bolder;
   margin-left: 40px;
   margin-right: 20px;
-  font-family: strom;
+  font-family: fredoka;
 }
 
 .navigointi a::before {
@@ -377,15 +377,29 @@ article.right img {
 }
 
 article.center {
-  flex: 80%;
+  flex: 70%;
   background-image: url("../img/Hawk1.png");
   padding: 5%;
   padding-left: -5em;
 }
 
+article.teksti {
+  flex: 70%;
+  background-image: url("../img/Hawk1.png");
+  padding: 5%;
+}
+
+div#esittely img {
+  border-radius: 30px;
+}
+
 div.text img {
   border-radius: 0px;
   width: 50%;
+}
+
+div.teksti {
+  width: 80%;
 }
 
 table.tarvikelista {
