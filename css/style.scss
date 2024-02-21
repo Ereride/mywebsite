@@ -4,16 +4,7 @@
 @import "variables";
 @import "reset";
 
-@font-face {
-  font-family: husky;
-  src: url('/css/Husky.woff');
-}
-
-@font-face {
-  font-family: strom;
-  src: url('/css/Strombon-Regular.woff');
-}
-
+/* Fontit */
 .protest {
   font-family: "Protest Revolution", sans-serif;
   font-weight: 400;
@@ -26,9 +17,9 @@
   font-style: normal;
 }
 
-
+/* Sivun rakenne */
 body {
-  min-height: 100vh;
+  min-height: 80%;
   background: url('../img/2.png') no-repeat;
   background-size: cover;
 }
@@ -36,7 +27,6 @@ body {
 div#container {
   display: flex;
   flex-direction: row;
-  margin: $general-margin;
 }
 
 div#content {
@@ -46,12 +36,12 @@ div#content {
     display: inherit;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80vw;
+    width: 80%;
     margin: 1em 2em 5em 2em;
   }
 
   aside {
-    width: 10vw;
+    width: 10%;
     padding: $general-padding;
     background-image: url('../img/flora.png');
     background-position: center;
@@ -86,7 +76,7 @@ article {
     margin-right: 6%;
     margin-left: -1em;
     margin-bottom: 1%;
-
+    border-radius: 30px;
   }
 
   ul {
@@ -98,98 +88,118 @@ article {
     font-size: 100%;
   }
 
-  h3, h2, h1 {
+  h3,
+  h2,
+  h1 {
     font-family: Gloria Hallelujah;
-    font-size: 2em;
+    font-size: 250%;
   }
-  
 
-  h1, h2{
+  h1,
+  h2 {
     font-family: Gloria Hallelujah;
-    font-size: 3em;
+    font-size: 300%;
     text-align: center;
     margin: 0.5em 0;
   }
 
-  p{
+  p {
     font-size: 110%;
+    float: left;
+    padding-left: 15%;
   }
 }
 
+.wrapper {
+  img {
+    width: 30%;
+    padding-top: 5%;
+  }
+}
 
-
-article.left {
-  background-image: url('../img/9_2.png');
+article.yksi {
+  background-image: url('../img/yksi.png');
 
   li {
     list-style-image: url('../img/koira/latetassu3.png');
   }
-
-  p {
-    float: left;
-    padding-left: 15%;
-  }
-
-  img {
-    border-radius: 30px;
-  }
-
 }
 
-
-article.right {
-  background-image: url('../img/rose.png');
+article.kaksi {
+  background-image: url('../img/kaksi.png');
 
   li {
     list-style-image: url('../img/koira/seratassu.png');
   }
-  p {
-    float: left;
-    padding-left: 15%;
-  }
-
-  img {
-    border-radius: 30px;
-  }
-
 }
 
-article.center{
+article.keski {
   flex: 70%;
-  background-image: url('../img/Hawk1.png');
+  background-image: url('../img/keski.png');
   padding: 5%;
   padding-left: -5em;
-}
 
-article.teksti{
-  flex: 70%;
-  background-image: url('../img/Hawk1.png');
-  padding: 5%;
-}
+  div.taulukko {
+    table {
+      margin-top: 2%;
+      display: inline-block;
+      margin-left: 2%;
+      border-radius: 30px;
 
-div#esittely{
-  img{
-    border-radius: 30px;
+      th {
+        text-decoration: underline;
+        font-size: 110%;
+      }
+
+      th,
+      td {
+        padding: 0 1em;
+        text-align: left;
+        text-shadow: 1px 0 white;
+      }
+    }
   }
 }
 
-div.text{
-  
+div#esittely {
+  display: flex;
+
   img {
-    border-radius: 0px;
-    width: 50%;
+    height: 50%;
   }
 }
 
-div.teksti{
+article.ompelu {
+  background-image: url('../img/keski.png');
+  padding: 5%;
+  padding-left: -5em;
+
+  div.ompelutext {
+    img {
+      width: 30%;
+    }
+  }
+}
+
+img.linkki {
+  border-radius: 30px;
+  width: 50%;
+}
+
+img.taso{
+  width: 42%;
+  margin-top: 20%;
+}
+
+
+div.teksti {
   width: 80%;
 }
-
-
 
 table.tarvikelista {
   margin-left: 15%;
   padding-top: 10%;
+  width: 100%;
 
   th {
     font-size: 150%;
@@ -199,60 +209,34 @@ table.tarvikelista {
   td {
     font-size: 110%;
   }
-
 }
 
-div.askartelu{
-
+div.askartelu {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  img{
+  img {
     display: block;
     margin: auto 0;
   }
-  
-  a{
+
+  a {
     text-shadow: 2px 2px lightblue;
-  }
-  
-}
-
-div.taulukkoteksti {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  table {
-    margin-left: 2em;
-    border-radius: 30px;
-
-    th {
-      text-decoration: underline;
-      font-size: 110%;   
-    }
-
-    th, td {
-      padding: 0 1em;
-      text-align: left;
-      text-shadow: 1px 0 white; 
+    img {
+      width: 50%;
     }
   }
-
-  table#valmiit {
-    background-image: url('../img/table_tausta.png');
-  }
-
-  table#suunnitelma {
-    background-image: url('../img/table_tausta1.png');
-  }
-  
-
 }
 
 
+table#valmiit {
+  background-image: url('../img/table_tausta.png');
+}
 
+table#suunnitelma {
+  background-image: url('../img/table_tausta1.png');
+}
 
 footer {
   position: fixed;
@@ -262,7 +246,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 5%;
-  background-image: url('../img/ForestofStars10.jpg');
+  background-image: url('../img/otsikko_footer.jpg');
   background-size: cover;
   background-position: center;
   color: $light-foreground-color;
@@ -276,6 +260,5 @@ footer {
     font-family: fredoka;
   }
 }
-
 
 @import "media-query";
