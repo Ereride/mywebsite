@@ -94,8 +94,52 @@
   height: 10vh;
 }
 
+article {
+  p {
+  font-size: 50%;
+  line-height: 1.5;
+  padding: 1%;
+}
+
+h1,h2 {
+  font-size: 80%;
+}
+
+h3 {
+  font-size: 100%;
+  text-align: center;
+}
+
+li {
+  font-size: 50%;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+img{
+  margin: 0;
+  border-radius: 10px;
+}
+
+.text p{
+  margin-bottom: 5%;
+}
+}
+
+div.askartelu{
+  display: block;
+  margin-top: 0;
+  
+  img {
+    margin-left: 30%;
+    align-items: center;
+    object-position: center;
+  }
+}
+
 table.tarvikelista {
-  font-size: 60%;   
+  font-size: 50%;   
   width: 100%;
   td{
     padding-right: 5%;
@@ -103,10 +147,14 @@ table.tarvikelista {
 }
 
 div.taulukko {
-  font-size: 60%;
+  font-size: 40%;
+  width: 100%;
+  line-height: 1.5;
 
   table {
     width: 100%;
+    padding: 2%;
+    
   }
   }
 

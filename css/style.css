@@ -265,7 +265,6 @@ article h2 {
 article p {
   font-size: 110%;
   float: left;
-  padding-left: 15%;
 }
 
 .wrapper img {
@@ -279,6 +278,9 @@ article.yksi {
 article.yksi li {
   list-style-image: url("../img/koira/latetassu3.png");
 }
+article.yksi p {
+  padding-left: 15%;
+}
 
 article.kaksi {
   background-image: url("../img/kaksi.png");
@@ -286,12 +288,14 @@ article.kaksi {
 article.kaksi li {
   list-style-image: url("../img/koira/seratassu.png");
 }
+article.kaksi p {
+  padding-left: 15%;
+}
 
 article.keski {
   flex: 70%;
   background-image: url("../img/keski.png");
   padding: 5%;
-  padding-left: -5em;
 }
 article.keski div.taulukko table {
   margin-top: 2%;
@@ -334,10 +338,6 @@ img.linkki {
 img.taso {
   width: 42%;
   margin-top: 20%;
-}
-
-div.teksti {
-  width: 80%;
 }
 
 table.tarvikelista {
@@ -469,17 +469,55 @@ footer p {
     margin-top: 20%;
     height: 10vh;
   }
+  article p {
+    font-size: 50%;
+    line-height: 1.5;
+    padding: 1%;
+  }
+  article h1, article h2 {
+    font-size: 80%;
+  }
+  article h3 {
+    font-size: 100%;
+    text-align: center;
+  }
+  article li {
+    font-size: 50%;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+  }
+  article img {
+    margin: 0;
+    border-radius: 10px;
+  }
+  article .text p {
+    margin-bottom: 5%;
+  }
+  div.askartelu {
+    display: block;
+    margin-top: 0;
+  }
+  div.askartelu img {
+    margin-left: 30%;
+    align-items: center;
+    -o-object-position: center;
+       object-position: center;
+  }
   table.tarvikelista {
-    font-size: 60%;
+    font-size: 50%;
     width: 100%;
   }
   table.tarvikelista td {
     padding-right: 5%;
   }
   div.taulukko {
-    font-size: 60%;
+    font-size: 40%;
+    width: 100%;
+    line-height: 1.5;
   }
   div.taulukko table {
     width: 100%;
+    padding: 2%;
   }
 }/*# sourceMappingURL=style.css.map */

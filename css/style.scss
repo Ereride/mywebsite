@@ -106,7 +106,6 @@ article {
   p {
     font-size: 110%;
     float: left;
-    padding-left: 15%;
   }
 }
 
@@ -123,6 +122,11 @@ article.yksi {
   li {
     list-style-image: url('../img/koira/latetassu3.png');
   }
+
+  p {
+    padding-left: 15%;
+  }
+
 }
 
 article.kaksi {
@@ -131,13 +135,16 @@ article.kaksi {
   li {
     list-style-image: url('../img/koira/seratassu.png');
   }
+
+  p {
+    padding-left: 15%;
+  }
 }
 
 article.keski {
   flex: 70%;
   background-image: url('../img/keski.png');
   padding: 5%;
-  padding-left: -5em;
 
   div.taulukko {
     table {
@@ -186,14 +193,9 @@ img.linkki {
   width: 50%;
 }
 
-img.taso{
+img.taso {
   width: 42%;
   margin-top: 20%;
-}
-
-
-div.teksti {
-  width: 80%;
 }
 
 table.tarvikelista {
@@ -216,6 +218,7 @@ div.askartelu {
   justify-content: center;
   align-items: center;
 
+
   img {
     display: block;
     margin: auto 0;
@@ -223,12 +226,12 @@ div.askartelu {
 
   a {
     text-shadow: 2px 2px lightblue;
+
     img {
       width: 50%;
     }
   }
 }
-
 
 table#valmiit {
   background-image: url('../img/table_tausta.png');
