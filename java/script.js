@@ -44,7 +44,7 @@ class Carousel {
             el.classList.remove('gallery-item-12');
         });
         this.carouselArray.slice(0, 5).forEach((el, i) => {
-            el.classList.add(`gallery-item-${i+1}`);
+            el.classList.add(`gallery-item-${i + 1}`);
         });
     }
 
@@ -79,8 +79,59 @@ exampleCarousel.addHoverListeners(); // Add hover listeners to stop and start ro
 function myFunction() {
     var x = document.getElementById("myNav");
     if (x.className === "navigointi") {
-      x.className += " responsive";
+        x.className += " responsive";
     } else {
-      x.className = "navigointi";
+        x.className = "navigointi";
     }
-  }
+}
+
+const apiKey = '';
+const documentId = '1XgKMmJLKHzUeC-vpI__poWJLlg8dmJGr4kt6ws5TbcY';
+const range = 'Kokonaisaika!A2';
+
+
+
+// Funktio hakee tiedot Google Sheetsistä ja lisää ne HTML-sivulle
+// Update the function to accept range parameter
+function getSheetData(range) {
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/1XgKMmJLKHzUeC-vpI__poWJLlg8dmJGr4kt6ws5TbcY/values/${range}?key=${apiKey}`;
+
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const asideContainer = document.querySelector('aside#virkkaus');
+
+        // Clear the container before adding new data
+        asideContainer.innerHTML = '';
+
+        // Assuming your data contains only one row
+        const row = data.values[0];
+
+        // Format time string "H:Min:Sec" from the data in A1, A2, and A3
+        const timeString = `${row[0]}`;
+
+        // Create a new <div> for the data
+        const dataDiv = document.createElement('div');
+
+        const titleParagraph = document.createElement('h2');
+        titleParagraph.textContent = 'Virkkausaika';
+        dataDiv.appendChild(titleParagraph);
+
+        // Create a <p> element for the time string and append it to the data <div>
+        const timeParagraph = document.createElement('p');
+        timeParagraph.textContent = timeString;
+        dataDiv.appendChild(timeParagraph); 
+
+        const timetextParagraph = document.createElement('h3');
+        timetextParagraph.textContent = 'H:MIN:S';
+        dataDiv.appendChild(timetextParagraph);
+        
+        // Append the data <div> to the <aside> container
+        asideContainer.appendChild(dataDiv);
+    })
+    .catch(error => console.error('Error fetching data:', error));
+}
+
+// Call the function with the specified range
+getSheetData('Kokonaisaika!A2'); // Update range as needed
+
