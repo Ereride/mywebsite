@@ -55,6 +55,14 @@
     height: 20vh;
   }
 
+  .gallery-item-1,
+  .gallery-item-5 {
+  display: none; 
+}
+
+.gallery-item-3 {
+  box-shadow: none;
+}
   article {
     p {
     font-size: 80%;
@@ -83,6 +91,10 @@
 
   }
 
+  aside {
+    font-size: 50%;
+  }
+
 }
 
 @media screen and (max-width: 600px){
@@ -92,6 +104,18 @@
 .gallery-container {
   margin-top: 20%;
   height: 10vh;
+}
+
+.gallery-item-1,
+.gallery-item-2,
+.gallery-item-4,
+.gallery-item-5 {
+  display: none;
+  
+}
+
+.gallery-item-3 {
+  box-shadow: none;
 }
 
 article {
@@ -156,6 +180,15 @@ div.taulukko {
     padding: 2%;
     
   }
+  }
+
+  aside {
+    position: absolute;
+    margin-top: -15%;
+    margin-left: 75%;
+    width: 20%;
+    height: 5%;
+    font-size: 25%;
   }
 
 }
