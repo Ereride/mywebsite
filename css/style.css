@@ -514,12 +514,15 @@ aside div h3 {
   }
 }
 @media screen and (max-width: 600px) {
+  .otsikko {
+    font-size: 70%;
+  }
   .navigointi a {
     font-size: 80%;
   }
   .gallery-container {
     margin-top: 20%;
-    height: 20vh;
+    height: 15vh;
   }
   .gallery-item-1,
   .gallery-item-2,
@@ -565,21 +568,17 @@ aside div h3 {
     -o-object-position: center;
        object-position: center;
   }
-  table.tarvikelista {
-    font-size: 50%;
-    width: 100%;
-  }
-  table.tarvikelista td {
-    padding-right: 5%;
-  }
   div.taulukko {
-    font-size: 40%;
+    font-size: 50%;
     width: 100%;
     line-height: 1.5;
   }
   div.taulukko table {
     width: 100%;
     padding: 2%;
+  }
+  div.taulukko table.tarvikelista {
+    padding: 10%;
   }
   aside {
     position: absolute;
