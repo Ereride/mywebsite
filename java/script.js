@@ -85,11 +85,8 @@ function myFunction() {
     }
 }
 
-
+const apiKey = "<%= process.env.API_KEY %>"
 const documentId = '1XgKMmJLKHzUeC-vpI__poWJLlg8dmJGr4kt6ws5TbcY';
-const range = 'Kokonaisaika!A2';
-
-
 
 // Funktio hakee tiedot Google Sheetsistä ja lisää ne HTML-sivulle
 // Update the function to accept range parameter
