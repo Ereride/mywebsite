@@ -190,9 +190,10 @@ img.taso {
 }
 
 table.tarvikelista {
-  margin-left: 15%;
-  padding-top: 10%;
   width: 100%;
+  background-image: url('../img/table_tausta.png');
+  padding: $general-padding;
+  border-radius: 30px;
 
   th {
     font-size: 150%;

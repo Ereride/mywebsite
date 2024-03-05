@@ -3,7 +3,6 @@
  
 
   .otsikko {
-    font-size: 50%;
     padding-left: 10%;
     flex-direction: row;
   }
@@ -51,8 +50,8 @@
   } 
 
   .gallery-container {
-    margin-top: 10%;
-    height: 20vh;
+    margin-top: 15%;
+    height: 30vh;
   }
 
   .gallery-item-1,
@@ -65,7 +64,7 @@
 }
   article {
     p {
-    font-size: 80%;
+    font-size: 90%;
   }
 
   h1,h2 {
@@ -77,8 +76,8 @@
   }
 
   li {
-    margin-top: 10%;
-    font-size: 80%;
+    margin-top: 1%;
+    font-size: 100%;
   }
   }
 
@@ -95,15 +94,29 @@
     font-size: 50%;
   }
 
+  div.askartelu{
+    display: block;
+    margin-top: 0;
+    
+    img {
+      margin-left: 30%;
+      align-items: center;
+      object-position: center;
+      width: 40%;
+    }
+  }
+
 }
 
 @media screen and (max-width: 600px){
 
-
+  .navigointi a {
+    font-size: 80%;
+  }
 
 .gallery-container {
   margin-top: 20%;
-  height: 10vh;
+  height: 20vh;
 }
 
 .gallery-item-1,
@@ -120,13 +133,13 @@
 
 article {
   p {
-  font-size: 50%;
+  font-size: 70%;
   line-height: 1.5;
   padding: 1%;
 }
 
 h1,h2 {
-  font-size: 80%;
+  font-size: 90%;
 }
 
 h3 {
