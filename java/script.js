@@ -85,7 +85,7 @@ function myFunction() {
     }
 }
 
-const apiKey = "<%= process.env.API_KEY %>"
+const apiKey = ""
 const documentId = '1XgKMmJLKHzUeC-vpI__poWJLlg8dmJGr4kt6ws5TbcY';
 const range = 'Kokonaisaika!A2';
 
